@@ -1,0 +1,14 @@
+/var/log/netconsd/*[!g][!z] {
+        compress
+        compressext .gz
+        compresscmd /usr/bin/gzip
+        uncompresscmd /usr/bin/gunzip
+        missingok
+        copytruncate
+        daily
+        rotate 31
+        minsize 2048
+        notifempty
+        dateext
+        dateformat .%Y-%m-%d.log
+}
