@@ -12,6 +12,7 @@ INCLUDES = -I../ncrx -I../include
 RE2_LIBS = -lre2
 
 mods = printer.so logger-simple.so logger-advanced.so
+mods = printer.so logger-simple.so logger-advanced.so tsvlogger.so jsonlogger.so
 
 all: $(mods)
 
