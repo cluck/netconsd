@@ -85,7 +85,7 @@ struct logtarget {
 			}
 		}
 
-		ret = open(hostname, O_TRUNC | O_WRONLY | O_CREAT, 0644);
+		ret = open(hostname, O_APPEND | O_WRONLY | O_CREAT, 0644);
 		if (ret == -1) {
 			fprintf(stderr, "FATAL: open() failed: %m\n");
 			abort();
