@@ -1,0 +1,7 @@
+Package: netconsd
+Version: 0.7.1-1
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Claudio Luck <claudio.luck@datact.ch>
+Description: netconsd

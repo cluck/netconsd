@@ -1,0 +1,18 @@
+[Unit]
+Description=netconsd.service
+# Documentation=man:...(8)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Environment=NETCONSD_MODULES=/usr/local/lib/netconsd/tsvlogger.so
+Environment=NETCONSD_PORT=6666
+Environment=NETCONSD_OPTS=""
+EnvironmentFile=-/etc/defaults/netconsd
+ExecStart=/usr/local/bin/netconsd $NETCONSD_OPTS -u $NETCONSD_PORT $NETCONSD_MODULES
+WorkingDirectory=/var/log/netconsole
+
+[Install]
+WantedBy=multi-user.target
+
